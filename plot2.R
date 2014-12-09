@@ -14,12 +14,12 @@ power.data.datetime <- paste(power.data$Date, power.data$Time)  # Create a date-
 power.data.datetime <- as.POSIXct(power.data.datetime, format="%Y-%m-%d %H:%M:%S") # Convert date-time field to POSIXct.
 
 ##  Plot to the screen for visual verification.
-print("Preparing plot for screen display...")
+print("Preparing plot for screen display.")
 plot(power.data.datetime, power.data$Global_active_power, type="l", 
      ylab="Global Active Power (kilowatts)", xlab="")
 
 ## Plot to the PNG device to create a file.
-print("Copying plot to the PNG file...")
+print("Copying plot to the PNG file.")
 dev.copy(png, file = "plot2.png", width=480, height=480)
 dev.off()
 
